@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Enter a Phoneword:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhonewordViewText" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhoneNumberText"
+            android:inputType="phone"
+            android:hint="请输入电话号码"
+            android:text="" />
+        <Button
+            android:text="Translate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TranslateButton" />
+        <Button
+            android:text="Call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CallButton" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="传送电话"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postPhoneButton" />
+        <Button
+            android:text="开关设置"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setSwitchButton" />
+    </LinearLayout>
+</LinearLayout>

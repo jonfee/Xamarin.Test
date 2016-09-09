@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">My Droid</string>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="Translate">Translate</string>
+  <string name="Call">Call</string>
+</resources>
