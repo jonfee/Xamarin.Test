@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Util;
 
 namespace Droid
 {
@@ -21,6 +22,7 @@ namespace Droid
 
         protected override void OnCreate(Bundle bundle)
         {
+            Log.Debug("OnCreate", "创建");
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
@@ -54,6 +56,54 @@ namespace Droid
                 Intent intent = new Intent(this, typeof(SwitchToggleActivity));
                 StartActivity(intent);
             };
+        }
+
+        protected override void OnPostCreate(Bundle savedInstanceState)
+        {
+            Log.Debug("OnPostCreate", "OnPostCreate called");
+            base.OnPostCreate(savedInstanceState);
+        }
+
+        protected override void OnStart()
+        {
+            Log.Debug("OnResume", "Activity重新回到前台");
+            base.OnStart();
+        }
+
+        protected override void OnDestroy()
+        {
+            Log.Debug("OnResume", "系统被销毁");
+            base.OnDestroy();
+        }
+
+        protected override void OnPause()
+        {
+            Log.Debug("OnResume", "暂停");
+            base.OnPause();
+        }
+
+        protected override void OnResume()
+        {
+            Log.Debug("OnResume", "恢复");
+            base.OnResume();
+        }
+
+        protected override void OnRestart()
+        {
+            Log.Debug("OnRestart", "系统重新回到前台");
+            base.OnRestart();
+        }
+
+        protected override void OnPostResume()
+        {
+            Log.Debug("OnPostResume", "恢复");
+            base.OnPostResume();
+        }
+
+        protected override void OnStop()
+        {
+            Log.Debug("OnStop", "停止");
+            base.OnStop();
         }
 
         private void translateButton_Click(object sender, EventArgs e)
